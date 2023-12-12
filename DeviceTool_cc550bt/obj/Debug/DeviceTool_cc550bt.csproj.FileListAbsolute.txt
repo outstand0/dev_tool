@@ -7,3 +7,12 @@ c:\users\youngsu\documents\visual studio 2015\Projects\DeviceTool_cc550bt\Device
 c:\users\youngsu\documents\visual studio 2015\Projects\DeviceTool_cc550bt\DeviceTool_cc550bt\obj\Debug\DeviceTool_cc550bt.csproj.GenerateResource.Cache
 c:\users\youngsu\documents\visual studio 2015\Projects\DeviceTool_cc550bt\DeviceTool_cc550bt\obj\Debug\DeviceTool_cc550bt.exe
 c:\users\youngsu\documents\visual studio 2015\Projects\DeviceTool_cc550bt\DeviceTool_cc550bt\obj\Debug\DeviceTool_cc550bt.pdb
+D:\mygit\DeviceTool_cc500bt2\DeviceTool_cc550bt\bin\Debug\DeviceTool_cc550bt.exe.config
+D:\mygit\DeviceTool_cc500bt2\DeviceTool_cc550bt\obj\Debug\DeviceTool_cc550bt.exe
+D:\mygit\DeviceTool_cc500bt2\DeviceTool_cc550bt\obj\Debug\DeviceTool_cc550bt.pdb
+D:\mygit\DeviceTool_cc500bt2\DeviceTool_cc550bt\bin\Debug\DeviceTool_cc550bt.exe
+D:\mygit\DeviceTool_cc500bt2\DeviceTool_cc550bt\bin\Debug\DeviceTool_cc550bt.pdb
+D:\mygit\DeviceTool_cc500bt2\DeviceTool_cc550bt\obj\Debug\DeviceTool_cc550bt.csprojResolveAssemblyReference.cache
+D:\mygit\DeviceTool_cc500bt2\DeviceTool_cc550bt\obj\Debug\DeviceTool_cc550bt.Form1.resources
+D:\mygit\DeviceTool_cc500bt2\DeviceTool_cc550bt\obj\Debug\DeviceTool_cc550bt.Properties.Resources.resources
+D:\mygit\DeviceTool_cc500bt2\DeviceTool_cc550bt\obj\Debug\DeviceTool_cc550bt.csproj.GenerateResource.Cache

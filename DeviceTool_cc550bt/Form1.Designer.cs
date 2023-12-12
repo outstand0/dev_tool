@@ -310,7 +310,7 @@
             this.tbNrOnOff.Location = new System.Drawing.Point(178, 388);
             this.tbNrOnOff.Margin = new System.Windows.Forms.Padding(2);
             this.tbNrOnOff.Name = "tbNrOnOff";
-            this.tbNrOnOff.Size = new System.Drawing.Size(80, 40);
+            this.tbNrOnOff.Size = new System.Drawing.Size(250, 40);
             this.tbNrOnOff.TabIndex = 21;
             this.tbNrOnOff.Text = "";
             // 
@@ -433,7 +433,7 @@
             // btnNrOnOffWrite
             // 
             this.btnNrOnOffWrite.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnNrOnOffWrite.Location = new System.Drawing.Point(330, 387);
+            this.btnNrOnOffWrite.Location = new System.Drawing.Point(499, 387);
             this.btnNrOnOffWrite.Name = "btnNrOnOffWrite";
             this.btnNrOnOffWrite.Size = new System.Drawing.Size(60, 40);
             this.btnNrOnOffWrite.TabIndex = 35;
@@ -444,7 +444,7 @@
             // btnNrOnOffRead
             // 
             this.btnNrOnOffRead.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnNrOnOffRead.Location = new System.Drawing.Point(264, 387);
+            this.btnNrOnOffRead.Location = new System.Drawing.Point(433, 387);
             this.btnNrOnOffRead.Name = "btnNrOnOffRead";
             this.btnNrOnOffRead.Size = new System.Drawing.Size(60, 40);
             this.btnNrOnOffRead.TabIndex = 34;
@@ -455,7 +455,7 @@
             // btmModeReadWriteWrite
             // 
             this.btmModeReadWriteWrite.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btmModeReadWriteWrite.Location = new System.Drawing.Point(499, 335);
+            this.btmModeReadWriteWrite.Location = new System.Drawing.Point(499, 337);
             this.btmModeReadWriteWrite.Name = "btmModeReadWriteWrite";
             this.btmModeReadWriteWrite.Size = new System.Drawing.Size(60, 40);
             this.btmModeReadWriteWrite.TabIndex = 33;
@@ -466,7 +466,7 @@
             // btnModeReadWriteRead
             // 
             this.btnModeReadWriteRead.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btnModeReadWriteRead.Location = new System.Drawing.Point(433, 335);
+            this.btnModeReadWriteRead.Location = new System.Drawing.Point(433, 337);
             this.btnModeReadWriteRead.Name = "btnModeReadWriteRead";
             this.btnModeReadWriteRead.Size = new System.Drawing.Size(60, 40);
             this.btnModeReadWriteRead.TabIndex = 32;

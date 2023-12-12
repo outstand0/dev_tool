@@ -123,8 +123,7 @@ namespace DeviceTool_cc550bt
                         {
                             tbModeReadWrite.Text = "Write fail";
                             Console.WriteLine("Write fail");
-                        }
-                        
+                        }                        
                     }
                     else if(flag_ReadBtFwVersion == true && ReceiveBuffer[i+5] == 0x0A && ReceiveBuffer[i+6] == 0x02) // Read BT Version
                     {
@@ -135,6 +134,32 @@ namespace DeviceTool_cc550bt
                             i++;
                         }
                         tbBtFwVersion.Text = ReceiveData[4] / 16 + ReceiveData[4] % 16 + "." + ReceiveData[5] / 16 + ReceiveData[5] % 16;
+                    }
+                    else if(flag_ReadNrOnOff == true && ReceiveBuffer[i+5] == 0x0A && ReceiveBuffer[i+6] == 0x01) // Read NR OnOff
+                    {
+                        if (ReceiveBuffer[i + 8] == 0x00)
+                        {
+                            tbNrOnOff.Text = "BYPASS MODE";
+                            Console.WriteLine("BYPASS MODE");
+                        }
+                        else
+                        {
+                            tbNrOnOff.Text = "NR MODE";
+                            Console.WriteLine("NR MODE");
+                        }
+                    }
+                    else if (flag_WriteNrOnOff == true && ReceiveBuffer[i + 4] == 0x01 && ReceiveBuffer[i + 5] == 0x0A) // Check Write NR OnOff 
+                    {
+                        if (ReceiveBuffer[i + 6] == 0x00)
+                        {
+                            tbNrOnOff.Text = "Write success";
+                            Console.WriteLine("Write success");
+                        }
+                        else
+                        {
+                            tbNrOnOff.Text = "Write fail";
+                            Console.WriteLine("Write fail");
+                        }
                     }
                     else
                     {
@@ -215,27 +240,27 @@ namespace DeviceTool_cc550bt
             tbReceiveTest.Clear();
         }
 
-        private void flag_clear()
+        public void flag_clear()
         {
-            bool flag_Connect = false;
-            bool flag_Disconnect = false;
-            bool flag_ReadDeviceName = false;
-            bool flag_WriteDeviceName = false;
-            bool flag_ReadBdAddress = false;
-            bool flag_WriteBdAddress = false;
-            bool flag_ReadXtalFtrim = false;
-            bool flag_WriteXtalFtrim = false;
-            bool flag_ReadLicenseKey = false;
-            bool flag_WriteLicenseKey = false;
-            bool flag_ReadModeReadWrite = false;
-            bool flag_WriteModeReadWrite = false;
-            bool flag_ReadNrOnOff = false;
-            bool flag_WriteNrOnOff = false;
-            bool flag_ReadBtFwVersion = false;
-            bool flag_WriteBtFwVersion = false;
-            bool flag_ReadIg1505FwVersion = false;
-            bool flag_WriteIg1505FwVersion = false;
-            bool flag_PdlReset = false;
+            flag_Connect = false;
+            flag_Disconnect = false;
+            flag_ReadDeviceName = false;
+            flag_WriteDeviceName = false;
+            flag_ReadBdAddress = false;
+            flag_WriteBdAddress = false;
+            flag_ReadXtalFtrim = false;
+            flag_WriteXtalFtrim = false;
+            flag_ReadLicenseKey = false;
+            flag_WriteLicenseKey = false;
+            flag_ReadModeReadWrite = false;
+            flag_WriteModeReadWrite = false;
+            flag_ReadNrOnOff = false;
+            flag_WriteNrOnOff = false;
+            flag_ReadBtFwVersion = false;
+            flag_WriteBtFwVersion = false;
+            flag_ReadIg1505FwVersion = false;
+            flag_WriteIg1505FwVersion = false;
+            flag_PdlReset = false;
         }
 
         private void btnDeviceNameRead_Click(object sender, EventArgs e)
@@ -295,7 +320,7 @@ namespace DeviceTool_cc550bt
 
         private void btnIg1505FwVersionRead_Click(object sender, EventArgs e)
         {
-            flag_ReadDeviceName = true;
+            flag_ReadIg1505FwVersion = true;
             byte[] dataToSend = new byte[] { 0x05, 0x5A, 0x06, 0x00, 0x00, 0x0A, 0x02, 0xF5, 0x00, 0x00 };
 
             cc550_Uartport.Write(dataToSend, 0, dataToSend.Length);
@@ -308,7 +333,7 @@ namespace DeviceTool_cc550bt
 
         private void btnNrOnOffRead_Click(object sender, EventArgs e)
         {
-            flag_ReadDeviceName = true;
+            flag_ReadNrOnOff = true;
             byte[] dataToSend = new byte[] { 0x05, 0x5A, 0x06, 0x00, 0x00, 0x0A, 0x04, 0xF5, 0x00, 0x00 };
 
             cc550_Uartport.Write(dataToSend, 0, dataToSend.Length);
@@ -316,7 +341,18 @@ namespace DeviceTool_cc550bt
 
         private void btnNrOnOffWrite_Click(object sender, EventArgs e)
         {
+            flag_WriteNrOnOff = true;
 
+            if(tbNrOnOff.Text == "0")
+            {
+                byte[] dataToSend = new byte[] { 0x05, 0x5A, 0x05, 0x00, 0x01, 0x0A, 0x04, 0xF5, 0x00 };
+                cc550_Uartport.Write(dataToSend, 0, dataToSend.Length);
+            }
+            else if(tbNrOnOff.Text == "1")
+            {
+                byte[] dataToSend = new byte[] { 0x05, 0x5A, 0x05, 0x00, 0x01, 0x0A, 0x04, 0xF5, 0x01 };
+                cc550_Uartport.Write(dataToSend, 0, dataToSend.Length);
+            }
         }
 
 
